@@ -27,5 +27,18 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+    
+    @ExceptionHandler(org.springframework.web.bind.MethodArgumentNotValidException.class)
+    public ResponseEntity<ApiResponse<Object>> handleValidation(
+            org.springframework.web.bind.MethodArgumentNotValidException ex){
+
+        String message = ex.getBindingResult()
+                .getFieldError()
+                .getDefaultMessage();
+
+        return ResponseEntity.badRequest()
+                .body(new ApiResponse<>(false,message,null));
+
+    }
 
 }
