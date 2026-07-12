@@ -160,7 +160,7 @@ your `.env` file / `application.properties`. Core entities: `Users`, `Roles`,
 |---|---|
 | **Nikhil/Bavesh** | AI & Integration — route optimization, mock data, map integration, frontend↔backend wiring |
 | **Om** | Frontend — React UI, live map, dashboards, alerts |
-| **Pankaj ** | Backend — APIs, auth, incident management, database integration |
+| **Pankaj** | Backend — APIs, auth, incident management, database integration |
 
 ---
 
